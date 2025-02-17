@@ -5,45 +5,43 @@ protected int[] stack;
 protected int top = -1;
 public ArrayStack(int cap) {
 capacity = cap;
-stack = new int[capacity]; 
+stack = new int[capacity];
 }
 public int size()
 {
     return (top+1);
 }
-public void push(int data ) 
+public void push(int data)
 {
-    if(isFull())
-    {
-        System.out.println("Stack is Overflow. Not Possible to insert in Full Stack");
-    }
-    else 
-    {
-        stack[++top] = data;
-        System.out.println("Element is inserted");
-    }
+if (isFull())
+System.out.println("Stack is Overflow. Not possible to insert in Full stack");
+else
+{
+stack[++top] = data;
+System.out.println("Element is inserted");
 }
-public int pop() 
+}
+public int pop()
 {
-    int data =-1;
-    if (isEmpty())
-    {
-        System.out.println("Stack is Underflow. No elements to be popped in Empty Stack");
-    }
-    else{
-        data = stack[top];
-        top--;
-    }
-    return data;
+int data=-1;
+if (isEmpty())
+{
+System.out.println("Stack is Underflow. No elements to be popped in Empty Stack");
+}
+else
+{
+data = stack[top];
+top--;
+}
+return data;
 }
 public boolean isFull()
 {
-    return (size() == capacity);
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+    return (size()==capacity);
 }
 public boolean isEmpty()
 {
-    return (top < 0);
+    return (top<0);
 }
 public void display()
 {
@@ -67,11 +65,11 @@ public static void main(String[] args)
     System.out.println("2.Pop");
     System.out.println("3.Display Stack");
     System.out.println("4.Exit\n");
-    System.out.println("Enter your choice:"); 
+    System.out.println("Enter your choice:");
     ch=sc.nextInt();
     switch(ch)
     {
-        case 1: 
+        case 1:
             System.out.println("Enter the element to insert:");
             data=sc.nextInt();
             s.push(data);
